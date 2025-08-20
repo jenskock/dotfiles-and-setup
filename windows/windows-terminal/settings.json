@@ -1,0 +1,121 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": [],
+    "copyFormatting": "none",
+    "copyOnSelect": true,
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "keybindings": [
+        {
+            "id": "Terminal.CopyToClipboard",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "Terminal.PasteFromClipboard",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "Terminal.DuplicatePaneAuto",
+            "keys": "alt+shift+d"
+        }
+    ],
+    "newTabMenu": [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": {
+        "defaults": {
+            "colorScheme": "IBM 5153",
+            "opacity": 80,
+            "useAcrylic": true
+        },
+        "list": [
+            {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "font": {
+                    "face": "MesloLGL Nerd Font",
+                    "size": 10
+                },
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell",
+                "startingDirectory": "C:\\Users\\j.kock\\OneDrive - KIRCHHOFF Ecotec"
+            },
+            {
+                "bellStyle": "none",
+                "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu",
+                "cursorShape": "filledBox",
+                "font": {
+                    "face": "MesloLGL Nerd Font",
+                    "size": 10
+                },
+                "guid": "{c8c11d51-3ebc-4eff-8c97-135bb85c55bc}",
+                "hidden": false,
+                "icon": "C:\\Users\\j.kock\\AppData\\Local\\wsl\\{f1b17186-f0e3-4371-8df9-e3361ec1be60}\\shortcut.ico",
+                "name": "Ubuntu",
+                "pathTranslationStyle": "wsl",
+                "startingDirectory": "/mnt/c/Users/j.kock/OneDrive - KIRCHHOFF Ecotec",
+                "suppressApplicationTitle": true
+            },
+            {
+                "bellStyle": "none",
+                "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu",
+                "cursorShape": "filledBox",
+                "font": {
+                    "face": "MesloLGL Nerd Font",
+                    "size": 10
+                },
+                "guid": "{b3946cdd-d36f-4970-b9ac-21c0f122f895}",
+                "hidden": false,
+                "icon": "C:\\Users\\j.kock\\AppData\\Local\\wsl\\{f1b17186-f0e3-4371-8df9-e3361ec1be60}\\shortcut.ico",
+                "name": "Notes",
+                "pathTranslationStyle": "wsl",
+                "startingDirectory": "/mnt/c/Users/j.kock/OneDrive - KIRCHHOFF Ecotec/Notes",
+                "suppressApplicationTitle": true
+            },
+            {
+                "bellStyle": "none",
+                "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu ",
+                "cursorShape": "filledBox",
+                "font": {
+                    "face": "MesloLGL Nerd Font",
+                    "size": 10
+                },
+                "guid": "{a5f08b2f-e0df-4396-8f28-aad0a7f33188}",
+                "hidden": false,
+                "icon": "C:\\Users\\j.kock\\AppData\\Local\\wsl\\{f1b17186-f0e3-4371-8df9-e3361ec1be60}\\shortcut.ico",
+                "name": "Sources",
+                "pathTranslationStyle": "wsl",
+                "startingDirectory": "/mnt/c/Sources",
+                "suppressApplicationTitle": true
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Eingabeaufforderung"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{60171faa-6ec3-5812-9ad7-cee46e189110}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{780a5b48-828e-5efb-afa5-3ea36983fcf9}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            }
+        ]
+    },
+    "schemes": [],
+    "themes": []
+}
