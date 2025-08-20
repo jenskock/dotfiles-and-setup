@@ -50,5 +50,39 @@ unzip -o Meslo.zip
 rm Meslo.zip
 fc-cache -fv
 
+echo "=== Setting up 'nn' command for quick notes ==="
+mkdir -p ~/.local/bin
+
+cat > ~/.local/bin/nn <<'EOF'
+#!/bin/bash
+
+# If no argument is given, show usage
+if [ -z "$1" ]; then
+  echo "Usage: nn \"Description of note\""
+  exit 1
+fi
+
+# Get current date in YY-MM-DD format
+date_str=$(date +%y-%m-%d)
+
+# Join all arguments as description
+desc="$*"
+
+# Replace spaces with underscores (safer for filenames)
+safe_desc=$(echo "$desc" | tr ' ' '_')
+
+# Construct filename
+filename="${date_str} ${safe_desc}.md"
+
+# Create the file if it doesn't exist
+touch "$filename"
+
+# Open the file in nano
+nano "$filename"
+EOF
+
+chmod +x ~/.local/bin/nn
+
 echo "=== Setup complete! ==="
 echo "👉 Restart your terminal and set the font to 'MesloLGS Nerd Font' in your terminal settings."
+echo "👉 You can now use 'nn \"My Note\"' to create and edit notes."
