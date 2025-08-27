@@ -5,7 +5,8 @@
     "copyFormatting": "none",
     "copyOnSelect": true,
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-    "keybindings": [
+    "keybindings": 
+    [
         {
             "id": "Terminal.CopyToClipboard",
             "keys": "ctrl+c"
@@ -15,25 +16,130 @@
             "keys": "ctrl+v"
         },
         {
-            "id": "Terminal.DuplicatePaneAuto",
-            "keys": "alt+shift+d"
+            "id": null,
+            "keys": "ctrl+alt+6"
+        },
+        {
+            "id": "Terminal.OpenNewTabProfile1",
+            "keys": "ctrl+2"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+2"
+        },
+        {
+            "id": "Terminal.OpenNewTabProfile0",
+            "keys": "ctrl+1"
+        },
+        {
+            "id": "Terminal.OpenNewTabProfile5",
+            "keys": "ctrl+6"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+1"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+9"
+        },
+        {
+            "id": "Terminal.OpenNewTabProfile2",
+            "keys": "ctrl+3"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+3"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+7"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+4"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+5"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+8"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+1"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+5"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+2"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+3"
+        },
+        {
+            "id": "Terminal.OpenNewTabProfile3",
+            "keys": "ctrl+4"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+4"
+        },
+        {
+            "id": "Terminal.OpenNewTabProfile4",
+            "keys": "ctrl+5"
+        },
+        {
+            "id": "Terminal.OpenNewTabProfile8",
+            "keys": "ctrl+9"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+6"
+        },
+        {
+            "id": "Terminal.OpenNewTabProfile6",
+            "keys": "ctrl+7"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+7"
+        },
+        {
+            "id": "Terminal.OpenNewTabProfile7",
+            "keys": "ctrl+8"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+8"
         }
     ],
-    "newTabMenu": [
+    "newTabMenu": 
+    [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": {
-        "defaults": {
+    "profiles": 
+    {
+        "defaults": 
+        {
             "colorScheme": "IBM 5153",
             "opacity": 80,
             "useAcrylic": true
         },
-        "list": [
+        "list": 
+        [
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                "font": {
+                "font": 
+                {
                     "face": "MesloLGL Nerd Font",
                     "size": 10
                 },
@@ -46,7 +152,8 @@
                 "bellStyle": "none",
                 "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu",
                 "cursorShape": "filledBox",
-                "font": {
+                "font": 
+                {
                     "face": "MesloLGL Nerd Font",
                     "size": 10
                 },
@@ -62,7 +169,8 @@
                 "bellStyle": "none",
                 "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu",
                 "cursorShape": "filledBox",
-                "font": {
+                "font": 
+                {
                     "face": "MesloLGL Nerd Font",
                     "size": 10
                 },
@@ -78,7 +186,8 @@
                 "bellStyle": "none",
                 "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu ",
                 "cursorShape": "filledBox",
-                "font": {
+                "font": 
+                {
                     "face": "MesloLGL Nerd Font",
                     "size": 10
                 },

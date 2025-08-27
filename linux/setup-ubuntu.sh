@@ -27,6 +27,11 @@ if ! grep -q 'export PATH=.*$HOME/.local/bin' ~/.bashrc; then
 fi
 export PATH=$PATH:$HOME/.local/bin
 
+# Ensure explorer.exe Alias
+if ! grep -q "alias ow='explorer.exe'" ~/.bashrc; then
+  echo "alias ow='explorer.exe'" >> ~/.bashrc
+fi
+
 echo "=== Setting up Oh My Posh themes ==="
 mkdir -p ~/.poshthemes
 cd ~/.poshthemes
