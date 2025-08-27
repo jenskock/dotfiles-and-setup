@@ -4,7 +4,7 @@
     "actions": [],
     "copyFormatting": "none",
     "copyOnSelect": true,
-    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "defaultProfile": "{c8c11d51-3ebc-4eff-8c97-135bb85c55bc}",
     "keybindings": 
     [
         {
@@ -137,18 +137,6 @@
         "list": 
         [
             {
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                "font": 
-                {
-                    "face": "MesloLGL Nerd Font",
-                    "size": 10
-                },
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "hidden": false,
-                "name": "Windows PowerShell",
-                "startingDirectory": "C:\\Users\\j.kock\\OneDrive - KIRCHHOFF Ecotec"
-            },
-            {
                 "bellStyle": "none",
                 "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu",
                 "cursorShape": "filledBox",
@@ -198,6 +186,18 @@
                 "pathTranslationStyle": "wsl",
                 "startingDirectory": "/mnt/c/Sources",
                 "suppressApplicationTitle": true
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "font": 
+                {
+                    "face": "MesloLGL Nerd Font",
+                    "size": 10
+                },
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell",
+                "startingDirectory": "C:\\Users\\j.kock\\OneDrive - KIRCHHOFF Ecotec"
             },
             {
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
