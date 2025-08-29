@@ -155,23 +155,6 @@
             },
             {
                 "bellStyle": "none",
-                "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu",
-                "cursorShape": "filledBox",
-                "font": 
-                {
-                    "face": "MesloLGL Nerd Font",
-                    "size": 10
-                },
-                "guid": "{b3946cdd-d36f-4970-b9ac-21c0f122f895}",
-                "hidden": false,
-                "icon": "C:\\Users\\j.kock\\AppData\\Local\\wsl\\{f1b17186-f0e3-4371-8df9-e3361ec1be60}\\shortcut.ico",
-                "name": "Notes",
-                "pathTranslationStyle": "wsl",
-                "startingDirectory": "/mnt/c/Users/j.kock/OneDrive - KIRCHHOFF Ecotec/Notes",
-                "suppressApplicationTitle": true
-            },
-            {
-                "bellStyle": "none",
                 "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu ",
                 "cursorShape": "filledBox",
                 "font": 

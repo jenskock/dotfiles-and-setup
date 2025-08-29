@@ -88,6 +88,75 @@ EOF
 
 chmod +x ~/.local/bin/nn
 
+echo "=== Installing Docker ==="
+# Install Docker dependencies
+sudo apt install -y apt-transport-https ca-certificates gnupg lsb-release
+
+# Add Docker's official GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+# Add Docker repository
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Update package list and install Docker
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+# Create docker group and add user (if not already exists)
+if ! getent group docker > /dev/null 2>&1; then
+    sudo groupadd docker
+fi
+
+# Add current user to docker group
+sudo usermod -aG docker "$USER"
+
+# Start and enable Docker service
+sudo systemctl start docker
+sudo systemctl enable docker
+
+echo "=== Installing Lazy-Docker ==="
+# Get the latest version of lazy-docker
+LAZYDOCKER_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazydocker/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
+
+if [ -z "$LAZYDOCKER_VERSION" ]; then
+    echo "❌ Failed to get lazy-docker version"
+    exit 1
+fi
+
+echo "📦 Installing lazy-docker version: $LAZYDOCKER_VERSION"
+
+# Download and install lazy-docker
+TEMP_DIR=$(mktemp -d)
+cd "$TEMP_DIR"
+
+curl -Lo lazydocker.tar.gz "https://github.com/jesseduffield/lazydocker/releases/latest/download/lazydocker_${LAZYDOCKER_VERSION}_Linux_x86_64.tar.gz"
+
+if [ ! -f lazydocker.tar.gz ]; then
+    echo "❌ Failed to download lazy-docker"
+    rm -rf "$TEMP_DIR"
+    exit 1
+fi
+
+# Extract and install
+tar xf lazydocker.tar.gz
+sudo mv lazydocker /usr/local/bin/
+sudo chmod +x /usr/local/bin/lazydocker
+
+# Clean up
+rm -rf "$TEMP_DIR"
+
+# Verify installation
+if command -v lazydocker > /dev/null 2>&1; then
+    echo "✅ Lazy-docker installed successfully"
+    lazydocker --version
+else
+    echo "❌ Lazy-docker installation failed"
+    exit 1
+fi
+
 echo "=== Setup complete! ==="
 echo "👉 Restart your terminal and set the font to 'MesloLGS Nerd Font' in your terminal settings."
 echo "👉 You can now use 'nn \"My Note\"' to create and edit notes."
+echo "👉 Docker is installed and configured. You may need to log out and back in for group changes to take effect."
+echo "👉 Use 'lazydocker' to manage Docker containers with a TUI interface."
+
