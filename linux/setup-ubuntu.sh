@@ -86,6 +86,25 @@ if ! grep -q "alias ow='explorer.exe'" ~/.bashrc; then
   echo "✅ Added explorer.exe alias"
 fi
 
+# Add ranger_cd function and alias
+if ! grep -q "ranger_cd()" ~/.bashrc; then
+  cat >> ~/.bashrc << 'EOF'
+
+# Ranger function to change directory
+ranger_cd() {
+  local tmpfile
+  tmpfile=$(mktemp)
+  ranger --choosedir="$tmpfile" "$@"
+  if [ -f "$tmpfile" ] && dir=$(cat "$tmpfile") && [ -d "$dir" ]; then
+    cd "$dir"
+  fi
+  rm -f "$tmpfile"
+}
+alias rcd=ranger_cd
+EOF
+  echo "✅ Added ranger_cd function and rcd alias"
+fi
+
 echo "=== Setting up Oh My Posh themes ==="
 if mkdir -p ~/.poshthemes && \
    cd ~/.poshthemes && \
