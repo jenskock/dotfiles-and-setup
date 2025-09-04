@@ -19,8 +19,8 @@ else
     echo "⚠️  System package update failed, continuing..."
 fi
 
-echo "=== Installing dependencies (curl, wget, unzip, git, ripgrep, btop) ==="
-if sudo apt install -y curl wget unzip git ripgrep btop; then
+echo "=== Installing dependencies (curl, wget, unzip, git, ripgrep, btop, ranger) ==="
+if sudo apt install -y curl wget unzip git ripgrep btop ranger; then
     echo "✅ Dependencies installed successfully"
 else
     echo "⚠️  Some dependencies failed to install, continuing..."
