@@ -19,6 +19,9 @@ Expand-Archive themes.zip -Force
 Remove-Item themes.zip
 Get-ChildItem *.omp.json | ForEach-Object { $_.Attributes = 'Normal' }
 
+Write-Host "=== Installing Bruno ==="
+choco install bruno -y
+
 Write-Host "=== Installing MesloLGS Nerd Font ==="
 $fontZip = "$env:TEMP\Meslo.zip"
 Invoke-WebRequest -Uri "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.zip" -OutFile $fontZip

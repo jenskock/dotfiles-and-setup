@@ -19,8 +19,8 @@ else
     echo "⚠️  System package update failed, continuing..."
 fi
 
-echo "=== Installing dependencies (curl, wget, unzip, git, ripgrep, btop, ranger) ==="
-if sudo apt install -y curl wget unzip git ripgrep btop ranger; then
+echo "=== Installing dependencies (curl, wget, unzip, git, ripgrep, btop, ranger, mc) ==="
+if sudo apt install -y curl wget unzip git ripgrep btop ranger mc; then
     echo "✅ Dependencies installed successfully"
 else
     echo "⚠️  Some dependencies failed to install, continuing..."
@@ -171,6 +171,18 @@ EOF
     echo "✅ 'nn' command set up successfully"
 else
     echo "⚠️  'nn' command setup failed, continuing..."
+fi
+
+echo "=== Configuring Nano with line numbers ==="
+# Create or update ~/.nanorc to enable line numbers permanently
+if mkdir -p ~/.config 2>/dev/null; then
+    if echo "set linenumbers" >> ~/.nanorc; then
+        echo "✅ Nano line numbers configuration added to ~/.nanorc"
+    else
+        echo "⚠️  Failed to configure Nano line numbers, continuing..."
+    fi
+else
+    echo "⚠️  Failed to create config directory, continuing..."
 fi
 
 echo "=== Installing Docker ==="
