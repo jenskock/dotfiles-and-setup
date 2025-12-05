@@ -39,7 +39,7 @@ if (!(Test-Path -Path $profilePath)) {
     New-Item -ItemType File -Path $profilePath -Force | Out-Null
 }
 
-$initLine = 'oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json" | Invoke-Expression'
+$initLine = 'oh-my-posh init pwsh --config "https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/huvix.omp.json" | Invoke-Expression'
 if (-not (Select-String -Path $profilePath -Pattern "oh-my-posh init pwsh" -Quiet)) {
     Add-Content -Path $profilePath -Value $initLine
 }
